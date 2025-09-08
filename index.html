@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="w-[117rem] mx-auto">
+<body class="w-[117rem] mx-auto bg-[#DCFCE7]">
 
 <header>
     <div class="navbar w-117rem H-6rem bg-green-700 text-white px-12 py-2" >
@@ -75,20 +75,75 @@
     </div>
     </div>
   </section>
-  <!-- <section>
-    <h3 class="text-4xl font-bold mt-17 text-center">Choose Your Trees</h3>
-    <div id="level-container">
+  
 
-    </div>
-        
-    
-</section> -->
-<section class="mx-auto mt-8 px-4 " style="max-width: 250px;" >
-  <h2 class="text-2xl font-bold text-center text-green-900 mb-6"> Categories</h2>
-  <div id="category-list" >
+ 
+  <body class="min-h-screen bg-green-100 text-black">
+  <section class="max-w-6xl flex mx-auto p-6 mt-6" style="max-width:1920px height :900px">
+  <!-- <h2 class="text-2xl font-bold text-center text-green-900 mb-6"> Categories</h2> -->
+  <div id="category-list" class="mt-6 max-width:250px flex-shrink-0" >
     <!-- Categories will be injected here -->
   </div>
+  <!-- Our Impact Section -->
+  <div class="max-w-6xl w-[1920px]  mx-auto p-6 ">
+  <h2 class="text-3xl text-center mb-6">Choose Your Trees</h2>
+  <div id="impact-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+  </div>
+  </div>
+  <div class="bg-white w-[250px] h-[700px] flex-shrink-0 text-center text-black border border-gray-300 rounded">
+  <!-- content here -->  
+  <h3 class="text-3xl">Your Cart</h3>
+
+  </div>
 </section>
+
+<section class="max-w-6xl mx-auto p-6">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+    <!-- Text Block -->
+    <div class="md:w-1/2 text-left">
+      <h2 class="text-3xl font-bold mb-4">About the Campaign</h2>
+      <p class="mb-4">
+      Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+      </p>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Restoration of natural habitats</li>
+        <li>Improvement of air quality</li>
+        <li>Support for local communities</li>
+      </ul>
+    </div>
+
+    <!-- Image Block -->
+    <div class="md:w-1/2">
+    <img src="assets/about.png" alt="Green Plant" class="w-full max-w-sm mx-auto rounded shadow">
+    </div>
+  </div>
+</section>
+<section class=" bg-green-200 w-[1920px] h-[436px]  gap-24">
+  <h4 class="text-black justify-center flex text-3xl mx-auto">Our Impact</h4>
+  <div class="flex  gap-24 text-center justify-center mt-25">
+     
+  <div class="text-center bg-white w-[516px] h-[156px] p-20 rounded-lg">
+    <h3 class="text-green">500k+</h3>
+    <h2>Trees Planted</h2>
+  </div>
+  <div class="text-center bg-white w-[516px] h-[156px] p-20 rounded-lg">
+    <h3 class="text-green">120+</h3>
+    <h2>Communities Involved</h2>
+  </div>
+  <div class="text-center bg-white w-[516px] h-[156px] p-20 rounded-lg">
+    <h3 class="text-green">30+</h3>
+    <h2>Countries Reached</h2>
+  </div>
+  </div>
+
+</section>
+
+
+
+
+
+</body>
 
 
 <script src="script/script.js"></script>
