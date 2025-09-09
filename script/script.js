@@ -86,27 +86,71 @@ fetch('https://openapi.programming-hero.com/api/categories')
 
     document.addEventListener('DOMContentLoaded', fetchFruitTrees);
 
-    const cart = [];
+const cart = [];
 
 function addToCart(tree) {
-  cart.push(tree);
-  updateCart();
+cart.push(tree);
+updateCart();
 }
 
-function updateCart() {
-  const list = document.getElementById('cart-list');
-  const total = document.getElementById('cart-total');
-  list.innerHTML = '';
+// function updateCart() {
+//   const list = document.getElementById('category-list');
+//   const total = document.getElementById('cart-total');
+//   list.innerHTML = '';
 
-  let sum = 0;
-  cart.forEach(item => {
-    const li = document.createElement('li');
-    li.textContent = `${item.name} - ৳${item.price}`;
-    list.appendChild(li);
-    sum += item.price;
+//   let sum = 0;
+//   cart.forEach(item => {
+//     const li = document.createElement('li');
+//     li.textContent = `${item.name} - ৳${item.price}`;
+//     list.appendChild(li);
+//     sum += item.price;
+//   });
+
+//   total.textContent = `Total: ৳${sum}`;
+// }
+
+function updateCart() {
+  const cartContainer = document.getElementById('cart');
+  cartContainer.innerHTML = '';
+
+  cart.forEach((tree, index) => {
+    const item = document.createElement('div');
+    item.className = 'flex justify-between items-center bg-green-100 p-2 rounded mb-2';
+
+    item.innerHTML = `
+      <span>${tree.name}</span>
+      <span>${tree.price} BDT</span>
+      <button onclick="removeFromCart(${index})" class="text-gray font-bold">❌</button>
+    
+    `;
+   cartContainer.appendChild(item);
   });
 
-  total.textContent = `Total: ৳${sum}`;
+  // calculateTotal();
+
+
+function calculateTotal() {
+  const total = cart.reduce((sum, tree) => sum + parseInt(tree.price), 0);
+  document.getElementById('totalPrice').innerText = `Total: ${total} BDT`;
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+calculateTotal();
+}
+
+
+function setActiveCategory(buttonId) {
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.classList.remove('bg-green-700', 'text-white');
+    btn.classList.add('bg-green-100');
+  });
+
+  const activeBtn = document.getElementById(buttonId);
+  activeBtn.classList.add('bg-green-700', 'text-white');
+  activeBtn.classList.remove('bg-green-100');
 }
 
 
