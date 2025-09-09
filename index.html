@@ -83,20 +83,26 @@
   <div id="treeContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 W-[1090PX] h-[600px]">
       <!-- JS will inject tree cards here -->
   </div>
+  
+
+<!-- Tree Display Container -->
+<div id="treeContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-12"></div>
+
   </div>
   <div id="cart" class="w-[250px] h-[600px] bg-base-100 text-center text-3xl text-black justify-center" style="flex-shrink: 0;">
   <h3>Your Cart</h3>
+  <h2 id = "totalprice" class="text-black ">Total</h2>
 
   </div>
   <div id="spinner" class="text-center my-4 hidden">
   <span class="loader"></span> <!-- You can style this with Tailwind or use a GIF -->
 </div>
-<!-- <button id="fruitTreeBtn" class="category-btn bg-green-100" onclick="loadCategory(1, 'fruitTreeBtn')">Fruit Tree</button> -->
 
 
   
 </section>
-<!-- </section>
+-->
+     </section>
 <section class="max-w-6xl mx-auto p-6">
   <div class="flex flex-col md:flex-row items-center justify-center gap-8">
     
@@ -112,11 +118,16 @@
       </ul>
     </div>
 
-    <div class="md:w-1/2">
+    
+
+  -->
+
+  <div class="md:w-1/2">
     <img src="assets/about.png" alt="Green Plant" class="w-full max-w-sm mx-auto rounded shadow">
     </div>
-  </div> -->
-<!-- </section>
+  </div>
+
+</section>
 <section class=" bg-green-200 w-[1920px] h-[436px]  gap-24">
   <h4 class="text-black justify-center flex text-3xl mx-auto">Our Impact</h4>
   <div class="flex  gap-24 text-center justify-center mt-25">
@@ -135,13 +146,26 @@
   </div>
   </div>
 
-</section> -->
-
-
-
-
-
+</section>
 </body>
+<!-- Plant a Tree Today Section -->
+<section class="bg-green-700 py-10 px-4  md:px-20">
+  <h2 class="text-3xl font-bold text-green-700 text-center mb-6"> Plant a Tree Today</h2>
+  <form class="max-w-xl mx-auto bg-green-600 p-6 rounded-lg shadow-md space-y-4">
+    <input type="text" placeholder="Your Name" class="w-full p-3 bg-white border rounded focus:outline-none focus:ring-2 focus:ring-green-500" required>
+    <input type="email" placeholder="Your Email" class="w-full p-3 bg-white border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500" required>
+    <input type="number" placeholder="Number of Trees" class="w-full bg-white p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500" required>
+    <button type="submit" class="w-full bg-yellow-400 text-white py-3 rounded hover:bg-green-700 transition duration-300">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-800 text-white py-6 mt-10">
+  <div class="text-center text-sm">
+    &copy; 2025 Green Earth Initiative. All rights reserved.
+  </div>
+</footer>
+
 
 
 <script src="script/script.js"></script>
